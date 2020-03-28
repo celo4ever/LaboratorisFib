@@ -13,4 +13,5 @@ struct LaboratoriModel {
     var id : String
     var descripcio : String
     var places : Int?
+    
 }
