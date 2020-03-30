@@ -1,0 +1,20 @@
+PODS:
+  - DeepDiff (2.3.1)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - DeepDiff
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - DeepDiff
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  DeepDiff: e5ae6c50d0321568e4508cec5930b9f10bb293fc
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: cf1dd2a0229b921b7e8d78096e3812047205422f
+
+COCOAPODS: 1.9.1

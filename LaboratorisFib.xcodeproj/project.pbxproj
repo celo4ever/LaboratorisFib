@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C9A3503AA3913306F87AE59 /* Pods_LaboratorisFib_LaboratorisFibUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD2225ADB1A64B1420F6307 /* Pods_LaboratorisFib_LaboratorisFibUITests.framework */; };
 		71451AD6242FA2D80053C112 /* LaboratoriManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71451AD5242FA2D80053C112 /* LaboratoriManagement.swift */; };
 		71CC3269242E29C600BE0F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC3268242E29C600BE0F3E /* AppDelegate.swift */; };
 		71CC326B242E29C600BE0F3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC326A242E29C600BE0F3E /* SceneDelegate.swift */; };
@@ -17,8 +18,9 @@
 		71CC3280242E29C800BE0F3E /* LaboratorisFibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC327F242E29C800BE0F3E /* LaboratorisFibTests.swift */; };
 		71CC328B242E29C800BE0F3E /* LaboratorisFibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC328A242E29C800BE0F3E /* LaboratorisFibUITests.swift */; };
 		71CC329C242E32B700BE0F3E /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC329B242E32B700BE0F3E /* CustomCollectionViewCell.swift */; };
-		71F4652E242FCE1500A415AC /* LaboratoriData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F4652D242FCE1500A415AC /* LaboratoriData.swift */; };
 		71F46531242FD34200A415AC /* LaboratoriModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F46530242FD34200A415AC /* LaboratoriModel.swift */; };
+		76C5C80C68E8ADA6F5C741C0 /* Pods_LaboratorisFib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6116223A262D02A7B72AA2 /* Pods_LaboratorisFib.framework */; };
+		BD6535A30A361C5597EFD639 /* Pods_LaboratorisFibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA584D374EF3CC9253B966B9 /* Pods_LaboratorisFibTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		203C360714411D6E8311A57B /* Pods-LaboratorisFibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaboratorisFibTests.debug.xcconfig"; path = "Target Support Files/Pods-LaboratorisFibTests/Pods-LaboratorisFibTests.debug.xcconfig"; sourceTree = "<group>"; };
+		59F1F20C9D241E2C54F39E43 /* Pods-LaboratorisFib-LaboratorisFibUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaboratorisFib-LaboratorisFibUITests.debug.xcconfig"; path = "Target Support Files/Pods-LaboratorisFib-LaboratorisFibUITests/Pods-LaboratorisFib-LaboratorisFibUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5AD2225ADB1A64B1420F6307 /* Pods_LaboratorisFib_LaboratorisFibUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaboratorisFib_LaboratorisFibUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67E54139410A5FB989B45EC3 /* Pods-LaboratorisFib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaboratorisFib.debug.xcconfig"; path = "Target Support Files/Pods-LaboratorisFib/Pods-LaboratorisFib.debug.xcconfig"; sourceTree = "<group>"; };
 		71451AD5242FA2D80053C112 /* LaboratoriManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratoriManagement.swift; sourceTree = "<group>"; };
 		71CC3265242E29C600BE0F3E /* LaboratorisFib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaboratorisFib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CC3268242E29C600BE0F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,8 +61,12 @@
 		71CC328A242E29C800BE0F3E /* LaboratorisFibUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratorisFibUITests.swift; sourceTree = "<group>"; };
 		71CC328C242E29C800BE0F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71CC329B242E32B700BE0F3E /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
-		71F4652D242FCE1500A415AC /* LaboratoriData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratoriData.swift; sourceTree = "<group>"; };
 		71F46530242FD34200A415AC /* LaboratoriModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratoriModel.swift; sourceTree = "<group>"; };
+		928224C328C1DD9B2C7DE3BD /* Pods-LaboratorisFibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaboratorisFibTests.release.xcconfig"; path = "Target Support Files/Pods-LaboratorisFibTests/Pods-LaboratorisFibTests.release.xcconfig"; sourceTree = "<group>"; };
+		9C6116223A262D02A7B72AA2 /* Pods_LaboratorisFib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaboratorisFib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA584D374EF3CC9253B966B9 /* Pods_LaboratorisFibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaboratorisFibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4FE8B7508F2250431C8C53 /* Pods-LaboratorisFib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaboratorisFib.release.xcconfig"; path = "Target Support Files/Pods-LaboratorisFib/Pods-LaboratorisFib.release.xcconfig"; sourceTree = "<group>"; };
+		ED8F1C1FE7A70F9A2D623B43 /* Pods-LaboratorisFib-LaboratorisFibUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaboratorisFib-LaboratorisFibUITests.release.xcconfig"; path = "Target Support Files/Pods-LaboratorisFib-LaboratorisFibUITests/Pods-LaboratorisFib-LaboratorisFibUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C5C80C68E8ADA6F5C741C0 /* Pods_LaboratorisFib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6535A30A361C5597EFD639 /* Pods_LaboratorisFibTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +90,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9A3503AA3913306F87AE59 /* Pods_LaboratorisFib_LaboratorisFibUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		609744DA51755C884680D5B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C6116223A262D02A7B72AA2 /* Pods_LaboratorisFib.framework */,
+				5AD2225ADB1A64B1420F6307 /* Pods_LaboratorisFib_LaboratorisFibUITests.framework */,
+				AA584D374EF3CC9253B966B9 /* Pods_LaboratorisFibTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		71CC325C242E29C600BE0F3E = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +114,8 @@
 				71CC327E242E29C800BE0F3E /* LaboratorisFibTests */,
 				71CC3289242E29C800BE0F3E /* LaboratorisFibUITests */,
 				71CC3266242E29C600BE0F3E /* Products */,
+				B28D2150FD644A2FD30825BD /* Pods */,
+				609744DA51755C884680D5B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -175,9 +200,21 @@
 			isa = PBXGroup;
 			children = (
 				71451AD5242FA2D80053C112 /* LaboratoriManagement.swift */,
-				71F4652D242FCE1500A415AC /* LaboratoriData.swift */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		B28D2150FD644A2FD30825BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67E54139410A5FB989B45EC3 /* Pods-LaboratorisFib.debug.xcconfig */,
+				CC4FE8B7508F2250431C8C53 /* Pods-LaboratorisFib.release.xcconfig */,
+				59F1F20C9D241E2C54F39E43 /* Pods-LaboratorisFib-LaboratorisFibUITests.debug.xcconfig */,
+				ED8F1C1FE7A70F9A2D623B43 /* Pods-LaboratorisFib-LaboratorisFibUITests.release.xcconfig */,
+				203C360714411D6E8311A57B /* Pods-LaboratorisFibTests.debug.xcconfig */,
+				928224C328C1DD9B2C7DE3BD /* Pods-LaboratorisFibTests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,9 +224,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71CC328F242E29C800BE0F3E /* Build configuration list for PBXNativeTarget "LaboratorisFib" */;
 			buildPhases = (
+				CAB29EC07BD4415FE05B4A5E /* [CP] Check Pods Manifest.lock */,
 				71CC3261242E29C600BE0F3E /* Sources */,
 				71CC3262242E29C600BE0F3E /* Frameworks */,
 				71CC3263242E29C600BE0F3E /* Resources */,
+				70607EC05BA4DF4E408997CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71CC3292242E29C800BE0F3E /* Build configuration list for PBXNativeTarget "LaboratorisFibTests" */;
 			buildPhases = (
+				EB8B06BFFAB70862CCEA418C /* [CP] Check Pods Manifest.lock */,
 				71CC3277242E29C800BE0F3E /* Sources */,
 				71CC3278242E29C800BE0F3E /* Frameworks */,
 				71CC3279242E29C800BE0F3E /* Resources */,
@@ -222,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71CC3295242E29C800BE0F3E /* Build configuration list for PBXNativeTarget "LaboratorisFibUITests" */;
 			buildPhases = (
+				23F8D53F0A8097822679FC4B /* [CP] Check Pods Manifest.lock */,
 				71CC3282242E29C800BE0F3E /* Sources */,
 				71CC3283242E29C800BE0F3E /* Frameworks */,
 				71CC3284242E29C800BE0F3E /* Resources */,
+				A4D86DF4504EA1F7EA40BC35 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +348,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23F8D53F0A8097822679FC4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaboratorisFib-LaboratorisFibUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70607EC05BA4DF4E408997CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaboratorisFib/Pods-LaboratorisFib-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaboratorisFib/Pods-LaboratorisFib-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaboratorisFib/Pods-LaboratorisFib-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4D86DF4504EA1F7EA40BC35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaboratorisFib-LaboratorisFibUITests/Pods-LaboratorisFib-LaboratorisFibUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LaboratorisFib-LaboratorisFibUITests/Pods-LaboratorisFib-LaboratorisFibUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LaboratorisFib-LaboratorisFibUITests/Pods-LaboratorisFib-LaboratorisFibUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAB29EC07BD4415FE05B4A5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaboratorisFib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB8B06BFFAB70862CCEA418C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LaboratorisFibTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71CC3261242E29C600BE0F3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -316,7 +461,6 @@
 				71CC3269242E29C600BE0F3E /* AppDelegate.swift in Sources */,
 				71451AD6242FA2D80053C112 /* LaboratoriManagement.swift in Sources */,
 				71CC326B242E29C600BE0F3E /* SceneDelegate.swift in Sources */,
-				71F4652E242FCE1500A415AC /* LaboratoriData.swift in Sources */,
 				71CC329C242E32B700BE0F3E /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +632,7 @@
 		};
 		71CC3290242E29C800BE0F3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E54139410A5FB989B45EC3 /* Pods-LaboratorisFib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +650,7 @@
 		};
 		71CC3291242E29C800BE0F3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC4FE8B7508F2250431C8C53 /* Pods-LaboratorisFib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +668,7 @@
 		};
 		71CC3293242E29C800BE0F3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 203C360714411D6E8311A57B /* Pods-LaboratorisFibTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +690,7 @@
 		};
 		71CC3294242E29C800BE0F3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 928224C328C1DD9B2C7DE3BD /* Pods-LaboratorisFibTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +712,7 @@
 		};
 		71CC3296242E29C800BE0F3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59F1F20C9D241E2C54F39E43 /* Pods-LaboratorisFib-LaboratorisFibUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -583,6 +732,7 @@
 		};
 		71CC3297242E29C800BE0F3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED8F1C1FE7A70F9A2D623B43 /* Pods-LaboratorisFib-LaboratorisFibUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

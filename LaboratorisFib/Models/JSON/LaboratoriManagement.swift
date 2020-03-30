@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct LaboratoriManagement{
     
@@ -29,9 +30,7 @@ struct LaboratoriManagement{
                 }
                 
                 if let safeData = data {
-                    let dataString = String(data: safeData, encoding: .utf8)
-                    self.parseJSON(laboratorisData: safeData)
-                    
+                    self.parseJSON(laboratorisData: safeData) // hauria d'afegir a algun singleton o base de dades
                 }
             }
             
@@ -41,17 +40,17 @@ struct LaboratoriManagement{
     
     func parseJSON(laboratorisData: Data){
         
-        let decoder = JSONDecoder()
-        do{
-            let decodedData = try decoder.decode(LaboratoriData.self, from: laboratorisData)
-            let labo = LaboratoriModel(id: decodedData.results[0].id, descripcio: decodedData.results[0].descripcio, places: decodedData.results[0].places)
-            
-            print(labo.id)
-        }catch{
-            print(error)
-        }
-            
+        let json = JSON(laboratorisData)
+        var laboratoris = [Laboratori]()
+        let entries = json["results"].arrayValue
         
+        for i in 0 ..< entries.count {
+            let labJSON = entries[i]
+            
+            let lab = Laboratori(json: labJSON)
+            laboratoris.append(lab)
+            print(lab.id!)
+            
+        }
     }
-    
 }
