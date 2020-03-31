@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-struct LaboratoriManagement{
+class LaboratoriManagement{
     
-    let urlLaboratoris = "https://api.fib.upc.edu/v2/laboratoris/?format=json&client_id=aWUwHpSXybOdHNPcix7QF0hl3ANqcMyKyLiwE1XW"
+    static var urlLaboratoris = "https://api.fib.upc.edu/v2/laboratoris/?format=json&client_id=aWUwHpSXybOdHNPcix7QF0hl3ANqcMyKyLiwE1XW"
    
-    func performRequest(){
+    class func performRequest(completion: @escaping ([Laboratori]) -> (), onError: @escaping () -> ()){
         // 1. Create url
         if let url = URL(string: urlLaboratoris) {
             
@@ -25,33 +26,24 @@ struct LaboratoriManagement{
             let task = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
                 
                 if error != nil{
-                    return
+                    onError()
                 }
                 
                 if let safeData = data {
-                    let dataString = String(data: safeData, encoding: .utf8)
-                    self.parseJSON(laboratorisData: safeData)
+                    let json = JSON(safeData)
+                    var laboratoris = [Laboratori]()
+                    let entries = json["results"].arrayValue
                     
+                    for i in 0 ..< entries.count {
+                        let labJSON = entries[i]
+                        let lab = Laboratori(json: labJSON)
+                        laboratoris.append(lab)
+                        print(lab.id!)
+                    }
+                    completion(laboratoris)
                 }
             }
-            
             task.resume()
         }
     }
-    
-    func parseJSON(laboratorisData: Data){
-        
-        let decoder = JSONDecoder()
-        do{
-            let decodedData = try decoder.decode(LaboratoriData.self, from: laboratorisData)
-            let labo = LaboratoriModel(id: decodedData.results[0].id, descripcio: decodedData.results[0].descripcio, places: decodedData.results[0].places)
-            
-            print(labo.id)
-        }catch{
-            print(error)
-        }
-            
-        
-    }
-    
 }

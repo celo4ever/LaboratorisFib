@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-LaboratorisFib/Pods-LaboratorisFib-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DeepDiff/DeepDiff.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
