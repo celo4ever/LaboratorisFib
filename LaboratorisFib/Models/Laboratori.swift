@@ -12,11 +12,14 @@ struct Laboratori {
     var id : String?
     var descripcio : String?
     var places : String?
-    
+   
     init(json: JSON){
-        print(json["results"]["id"].stringValue)
         self.id = json["id"].stringValue
         self.descripcio = json["descripcio"].stringValue
         self.places = json["places"].stringValue
+    }
+    
+    init(id: String){
+        self.id = id
     }
 }

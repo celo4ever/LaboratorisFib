@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		3C9A3503AA3913306F87AE59 /* Pods_LaboratorisFib_LaboratorisFibUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD2225ADB1A64B1420F6307 /* Pods_LaboratorisFib_LaboratorisFibUITests.framework */; };
 		7112F97924329E03002DF723 /* LaboratoriViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7112F97824329E03002DF723 /* LaboratoriViewModel.swift */; };
+		71425020245841A000A856EE /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7142501F245841A000A856EE /* Singleton.swift */; };
 		71451AD6242FA2D80053C112 /* LaboratoriManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71451AD5242FA2D80053C112 /* LaboratoriManagement.swift */; };
+		71A320CA2455E5C000D4B723 /* LabLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A320C92455E5C000D4B723 /* LabLayout.swift */; };
 		71CC3269242E29C600BE0F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC3268242E29C600BE0F3E /* AppDelegate.swift */; };
 		71CC326B242E29C600BE0F3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC326A242E29C600BE0F3E /* SceneDelegate.swift */; };
-		71CC326D242E29C600BE0F3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC326C242E29C600BE0F3E /* ViewController.swift */; };
+		71CC326D242E29C600BE0F3E /* LaboratorisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC326C242E29C600BE0F3E /* LaboratorisController.swift */; };
 		71CC3270242E29C600BE0F3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CC326E242E29C600BE0F3E /* Main.storyboard */; };
 		71CC3272242E29C800BE0F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71CC3271242E29C800BE0F3E /* Assets.xcassets */; };
 		71CC3275242E29C800BE0F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71CC3273242E29C800BE0F3E /* LaunchScreen.storyboard */; };
@@ -47,11 +49,13 @@
 		5AD2225ADB1A64B1420F6307 /* Pods_LaboratorisFib_LaboratorisFibUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LaboratorisFib_LaboratorisFibUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E54139410A5FB989B45EC3 /* Pods-LaboratorisFib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LaboratorisFib.debug.xcconfig"; path = "Target Support Files/Pods-LaboratorisFib/Pods-LaboratorisFib.debug.xcconfig"; sourceTree = "<group>"; };
 		7112F97824329E03002DF723 /* LaboratoriViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratoriViewModel.swift; sourceTree = "<group>"; };
+		7142501F245841A000A856EE /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		71451AD5242FA2D80053C112 /* LaboratoriManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratoriManagement.swift; sourceTree = "<group>"; };
+		71A320C92455E5C000D4B723 /* LabLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabLayout.swift; sourceTree = "<group>"; };
 		71CC3265242E29C600BE0F3E /* LaboratorisFib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaboratorisFib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CC3268242E29C600BE0F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CC326A242E29C600BE0F3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		71CC326C242E29C600BE0F3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71CC326C242E29C600BE0F3E /* LaboratorisController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratorisController.swift; sourceTree = "<group>"; };
 		71CC326F242E29C600BE0F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71CC3271242E29C800BE0F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71CC3274242E29C800BE0F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,6 +129,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		71A320C82455E57400D4B723 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				71A320C92455E5C000D4B723 /* LabLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		71CC325C242E29C600BE0F3E = {
 			isa = PBXGroup;
 			children = (
@@ -150,16 +162,18 @@
 		71CC3267242E29C600BE0F3E /* LaboratorisFib */ = {
 			isa = PBXGroup;
 			children = (
+				71CC326E242E29C600BE0F3E /* Main.storyboard */,
+				71A320C82455E57400D4B723 /* Layouts */,
 				7112F97724329DBD002DF723 /* ViewModels */,
 				7112F97624329D8C002DF723 /* Network */,
 				71CC329D242E32C400BE0F3E /* Views */,
 				71CC329A242E2E4600BE0F3E /* Delegates */,
 				71CC3299242E2E3900BE0F3E /* Controllers */,
 				71CC3298242E2E1D00BE0F3E /* Models */,
-				71CC326E242E29C600BE0F3E /* Main.storyboard */,
 				71CC3271242E29C800BE0F3E /* Assets.xcassets */,
 				71CC3273242E29C800BE0F3E /* LaunchScreen.storyboard */,
 				71CC3276242E29C800BE0F3E /* Info.plist */,
+				7142501F245841A000A856EE /* Singleton.swift */,
 			);
 			path = LaboratorisFib;
 			sourceTree = "<group>";
@@ -193,7 +207,7 @@
 		71CC3299242E2E3900BE0F3E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				71CC326C242E29C600BE0F3E /* ViewController.swift */,
+				71CC326C242E29C600BE0F3E /* LaboratorisController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -468,10 +482,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F46531242FD34200A415AC /* Laboratori.swift in Sources */,
-				71CC326D242E29C600BE0F3E /* ViewController.swift in Sources */,
+				71425020245841A000A856EE /* Singleton.swift in Sources */,
+				71CC326D242E29C600BE0F3E /* LaboratorisController.swift in Sources */,
 				71CC3269242E29C600BE0F3E /* AppDelegate.swift in Sources */,
 				71451AD6242FA2D80053C112 /* LaboratoriManagement.swift in Sources */,
 				71CC326B242E29C600BE0F3E /* SceneDelegate.swift in Sources */,
+				71A320CA2455E5C000D4B723 /* LabLayout.swift in Sources */,
 				71CC329C242E32B700BE0F3E /* CustomCollectionViewCell.swift in Sources */,
 				7112F97924329E03002DF723 /* LaboratoriViewModel.swift in Sources */,
 			);

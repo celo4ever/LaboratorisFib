@@ -10,19 +10,28 @@ import Foundation
 import ARKit
 
 class LaboratoriViewModel{
-    var laboratoris = [Laboratori]()
-    private var viewController: ViewController
     
-    func getLaboratoris () {
-        
-        LaboratoriManagement.performRequest(completion: { (laboratoris) in
-            //afegir laboratori al singleton
-        }, onError: {})
-        
+    var labs : [Laboratori] {
+        get{
+            return DataSingleton.sharedInstance.labs
+        }
     }
     
-    init(viewController: ViewController) {
-        self.viewController = viewController
+    private var controller : LaboratorisController
+    
+    func getLaboratoris () {
+        LaboratoriManagement.performRequest{ labs in
+            DataSingleton.sharedInstance.labs.append(contentsOf: labs)
+            self.controller.collectionView?.reloadData()
+         //   print(self.laboratoris)
+        }
+    
+    }
+    
+    init(controller: LaboratorisController) {
+        self.controller = controller
         getLaboratoris()
     }
 }
+
+

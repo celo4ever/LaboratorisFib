@@ -9,7 +9,21 @@
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var nomAulari: UILabel!
+    
+    override func awakeFromNib() {
+      super.awakeFromNib()
+      containerView.layer.cornerRadius = 6
+      containerView.layer.masksToBounds = true
+    }
+    
+    var lab: Laboratori? {
+      didSet {
+        if let lab = lab {
+            nomAulari.text = lab.id
+        }
+      }
+    }
     
 }

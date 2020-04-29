@@ -11,10 +11,12 @@ import SwiftyJSON
 
 class LaboratoriManagement{
     
+    var labs = [Laboratori]()
     static var urlLaboratoris = "https://api.fib.upc.edu/v2/laboratoris/?format=json&client_id=aWUwHpSXybOdHNPcix7QF0hl3ANqcMyKyLiwE1XW"
    
-    class func performRequest(completion: @escaping ([Laboratori]) -> (), onError: @escaping () -> ()){
+    class func performRequest(completion: @escaping ([Laboratori]) -> ()){
         // 1. Create url
+        
         if let url = URL(string: urlLaboratoris) {
             
             // 2. Create session
@@ -26,24 +28,27 @@ class LaboratoriManagement{
             let task = session.dataTask(with: url) { (data: Data?, response: URLResponse?, error: Error?) in
                 
                 if error != nil{
-                    onError()
+                    
                 }
                 
                 if let safeData = data {
                     let json = JSON(safeData)
-                    var laboratoris = [Laboratori]()
                     let entries = json["results"].arrayValue
-                    
+                    var labs = [Laboratori]()
                     for i in 0 ..< entries.count {
                         let labJSON = entries[i]
                         let lab = Laboratori(json: labJSON)
-                        laboratoris.append(lab)
-                        print(lab.id!)
+                        labs.append(lab)
                     }
-                    completion(laboratoris)
+                    DispatchQueue.main.async {
+                        completion(labs)
+                    }
                 }
+                
             }
             task.resume()
         }
     }
+    
+
 }
