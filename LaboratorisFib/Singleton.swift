@@ -13,8 +13,13 @@ class DataSingleton{
     static let sharedInstance = DataSingleton()
     private init() {}
     var labs:[Laboratori] = [Laboratori]()
-    
+    var favs:[Laboratori] = [Laboratori]()
+
     func add(lab: Laboratori){
         self.labs.append(lab)
+    }
+    
+    func addFav(lab: Laboratori){
+        self.favs.append(lab)
     }
 }

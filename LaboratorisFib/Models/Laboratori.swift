@@ -12,11 +12,12 @@ struct Laboratori {
     var id : String?
     var descripcio : String?
     var places : String?
-   
+    var tamany : CGFloat = 0
     init(json: JSON){
         self.id = json["id"].stringValue
         self.descripcio = json["descripcio"].stringValue
         self.places = json["places"].stringValue
+        self.tamany = CGFloat(172)
     }
     
     init(id: String){

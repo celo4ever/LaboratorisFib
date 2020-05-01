@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol LaboratorisLayoutDelegate: AnyObject {
   func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat
 }
@@ -27,11 +26,10 @@ class LabLayout: UICollectionViewLayout {
     private var contentHeight: CGFloat = 0
 
     private var contentWidth: CGFloat {
-    guard let collectionView = collectionView else {
-        return 0
-    }
-    let insets = collectionView.contentInset
-        return collectionView.bounds.width - (insets.left + insets.right)
+        guard let collectionView = collectionView else {
+            return 0
+        }
+        return collectionView.bounds.width
     }
 
     // 5
@@ -41,39 +39,42 @@ class LabLayout: UICollectionViewLayout {
       
     override func prepare() {
     // 1
-    guard
-        cache.isEmpty == true,
+    guard cache.isEmpty == true || cache.isEmpty == false,
         let collectionView = collectionView
         else {
             return
-    }
-    // 2
-    let columnWidth = contentWidth / CGFloat(numberOfColumns)
+        }
+    contentHeight = 0
+        
+    //Array amb el coordenades X per el frame
     var xOffset: [CGFloat] = []
     for column in 0..<numberOfColumns {
-        xOffset.append(CGFloat(column) * columnWidth)
+        xOffset.append(CGFloat(column) * 122)
     }
+  
     var column = 0
-    var yOffset: [CGFloat] = .init(repeating: 0, count: numberOfColumns)
     
+    let number = collectionView.numberOfItems(inSection: 0)
     // 3
-    for item in 0..<collectionView.numberOfItems(inSection: 0) {
+    for item in 0..<number {
         let indexPath = IndexPath(item: item, section: 0)
             
         // 4
-        let photoHeight = delegate?.collectionView(collectionView,
-            heightForPhotoAtIndexPath: indexPath) ?? 180
-        let height = cellPadding * 2 + photoHeight
-        let frame = CGRect(x: xOffset[column],y: yOffset[column], width: columnWidth,height: height)
+        let height = cellPadding * 2 + 128
+        let width = cellPadding * 2 + 122
+        
+        let frame = CGRect(x: xOffset[column],y: cellPadding * 2, width: width,height: height)
+        
         let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
         // 5
         let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
         attributes.frame = insetFrame
-        cache.append(attributes)
+        if(cache.count < number)
+        {cache.append(attributes)}
             
         // 6
         contentHeight = max(contentHeight, frame.maxY)
-        yOffset[column] = yOffset[column] + height
+        xOffset[column] = xOffset[column] + width + cellPadding
             
         column = column < (numberOfColumns - 1) ? (column + 1) : 0
         }

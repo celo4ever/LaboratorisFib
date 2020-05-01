@@ -9,11 +9,24 @@
 import Foundation
 import ARKit
 
+enum SelectedType {
+    case top
+    case fav
+}
+
 class LaboratoriViewModel{
+    
+    var selectedType: SelectedType = .top {
+        didSet {
+    controller.labsCollection.reloadData()
+        }
+    }
     
     var labs : [Laboratori] {
         get{
-            return DataSingleton.sharedInstance.labs
+            if self.selectedType == .top {
+                return DataSingleton.sharedInstance.labs
+            }else { return DataSingleton.sharedInstance.favs }
         }
     }
     
@@ -22,8 +35,7 @@ class LaboratoriViewModel{
     func getLaboratoris () {
         LaboratoriManagement.performRequest{ labs in
             DataSingleton.sharedInstance.labs.append(contentsOf: labs)
-            self.controller.collectionView?.reloadData()
-         //   print(self.laboratoris)
+            self.controller.labsCollection?.reloadData()
         }
     
     }
@@ -33,5 +45,3 @@ class LaboratoriViewModel{
         getLaboratoris()
     }
 }
-
-
