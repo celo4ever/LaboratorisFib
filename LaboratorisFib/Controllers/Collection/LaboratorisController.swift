@@ -38,25 +38,21 @@ class LaboratorisController: UIViewController {
         
         custom(view: targeta)
         custom(view: scrollView)
-        
-        targetaTitol.layer.cornerRadius = 9
-        targetaTitol.clipsToBounds = true
-        targetaTitol.layer.masksToBounds = false
-        targetaTitol.layer.shadowOffset = CGSize(width: 0, height: -2)
-        targetaTitol.layer.shadowOpacity = 0.6
-        
+        initTargeta(targetaTitol)
+    
         labsCollection.layer.cornerRadius = 5
-        let insetX = (targeta.bounds.width - (targeta.bounds.width - 10))
-        let insetY = (targeta.bounds.height - cellHeight) / 2
-        
-          
-        labsCollection.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
           
         labsCollection.delegate = self
         labsCollection.dataSource = self
         
     }
-    
+    private func initTargeta(_ targetaTitol: UIView){
+        targetaTitol.layer.cornerRadius = 9
+        targetaTitol.clipsToBounds = true
+        targetaTitol.layer.masksToBounds = false
+        targetaTitol.layer.shadowOffset = CGSize(width: 0, height: -2)
+        targetaTitol.layer.shadowOpacity = 0.6
+    }
     @IBAction func valueChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
             case 0:
