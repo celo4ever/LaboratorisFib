@@ -9,20 +9,25 @@
 import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var containerView: UIView!
+
     @IBOutlet weak var nomAulari: UILabel!
     
     var delegate: UICollectionViewLongPressDelegate!
+    
     var indexPath: IndexPath!
     
     override func awakeFromNib() {
-      super.awakeFromNib()
-      nomAulari.sizeToFit()
-      containerView.layer.cornerRadius = 6
-      containerView.layer.masksToBounds = true
-        
+        super.awakeFromNib()
+        nomAulari.sizeToFit()
+        layer.cornerRadius = 15
+        clipsToBounds = true
+        layer.masksToBounds = false
+        layer.shadowRadius = 4
+        layer.shadowOpacity = 0.5
+        layer.shadowOffset = CGSize(width: 5, height: 5)
     }
+    
+    
     
     func create(_ labo:Laboratori, _ index: IndexPath) {
         nomAulari.text = labo.id
@@ -44,3 +49,4 @@ class CustomCollectionViewCell: UICollectionViewCell {
         }
     }
 }
+

@@ -12,44 +12,42 @@ import SwiftyJSON
 
 class LaboratorisController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var targetaTitol: UIView!
+    @IBOutlet weak var separator: UIView!
+    @IBOutlet weak var nomAulari: UILabel!
+    @IBOutlet weak var scrollView: UIView!
     @IBOutlet weak var targeta: UIView!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet weak var labsCollection: UICollectionView!
     fileprivate var lV: LaboratoriViewModel!
 
-    let cellScale: CGFloat = 0.6
+    
     
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+    var cellWidth: CGFloat!
+    var cellHeight: CGFloat!
     override func viewDidLoad() {
         
         super.viewDidLoad()
         lV = LaboratoriViewModel(controller: self)
+        cellWidth = floor(self.targeta.bounds.width * 0.3)
+        cellHeight = floor(self.targeta.bounds.height * 0.8)
         
-        targeta.layer.cornerRadius = 20
-        targeta.clipsToBounds = true
-        targeta.layer.masksToBounds = false
-        targeta.layer.shadowRadius = 10
-        targeta.layer.shadowOpacity = 1.0
-        targeta.layer.shadowOffset = CGSize(width: 3, height: 3)
+        custom(view: targeta)
+        custom(view: scrollView)
         
+        targetaTitol.layer.cornerRadius = 9
+        targetaTitol.clipsToBounds = true
+        targetaTitol.layer.masksToBounds = false
+        targetaTitol.layer.shadowOffset = CGSize(width: 0, height: -2)
+        targetaTitol.layer.shadowOpacity = 0.6
         
-        scrollView.layer.cornerRadius = 15
-        scrollView.clipsToBounds = true
-        scrollView.layer.masksToBounds = false
-        scrollView.layer.shadowRadius = 10
-        scrollView.layer.shadowOpacity = 1.0
-        scrollView.layer.shadowOffset = CGSize(width: 3, height: 3)
-        view.layer.masksToBounds = false
-        let cellWidth : CGFloat = 122
-        let cellHeight : CGFloat = 128
-        
-        let insetX = (cellWidth) / 3
-        let insetY = (labsCollection.bounds.height - cellHeight) / 4
+        labsCollection.layer.cornerRadius = 5
+        let insetX = (targeta.bounds.width - (targeta.bounds.width - 10))
+        let insetY = (targeta.bounds.height - cellHeight) / 2
         
           
         labsCollection.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
@@ -71,6 +69,17 @@ class LaboratorisController: UIViewController {
     }
 }
 
+extension LaboratorisController: CustomViews {
+    
+    func custom(view: UIView){
+        view.layer.cornerRadius = 15
+        view.clipsToBounds = true
+        view.layer.masksToBounds = false
+        view.layer.shadowOffset = .zero
+        view.layer.shadowOpacity = 0.6
+    }
+}
+
 extension LaboratorisController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return lV.labs.count
@@ -83,9 +92,8 @@ extension LaboratorisController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
 
-    //Calcules com vols veure els
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 122, height: 128)
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }
 

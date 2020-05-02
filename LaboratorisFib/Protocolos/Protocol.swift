@@ -13,6 +13,6 @@ protocol UICollectionViewLongPressDelegate {
     func onLongPress(indexPath: IndexPath)
 }
 
-protocol UIViewModel: AnyObject{
-    func reload()
+protocol CustomViews {
+    func custom(view: UIView)
 }

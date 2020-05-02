@@ -180,13 +180,13 @@
 		71CC3267242E29C600BE0F3E /* LaboratorisFib */ = {
 			isa = PBXGroup;
 			children = (
+				71CC329A242E2E4600BE0F3E /* Delegates */,
 				71C85789245AED77000E8A03 /* Protocolos */,
 				71CC326E242E29C600BE0F3E /* Main.storyboard */,
 				71A320C82455E57400D4B723 /* Layouts */,
 				7112F97724329DBD002DF723 /* ViewModels */,
 				7112F97624329D8C002DF723 /* Network */,
 				71CC329D242E32C400BE0F3E /* Views */,
-				71CC329A242E2E4600BE0F3E /* Delegates */,
 				71CC3299242E2E3900BE0F3E /* Controllers */,
 				71CC3298242E2E1D00BE0F3E /* Models */,
 				71CC3271242E29C800BE0F3E /* Assets.xcassets */,
